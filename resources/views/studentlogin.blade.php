@@ -9,16 +9,15 @@
 </head>
 <body >
     <br>
-    <form action="{{url('adlog')}}" method="post" align="center"  name="myform" onsubmit="return login()" style="border: 3px solid #665e5e; width: 60%;" >
+    <form action="{{url('studdata')}}" method="post" align="center"  name="myform" onsubmit="return login()" style="border: 3px solid #665e5e; width: 70%;" >
         @csrf
-        <h3><u style="color: blue;"> 𝑨𝒅𝒎𝒊𝒏 𝑳𝒐𝒈𝒊𝒏</u></h3><br>
+        <h3><u style="color: blue;"> 𝑳𝒐𝒈𝒊𝒏 𝑯𝒆𝒓𝒆 </u></h3><br>
         <label for="">𝘜𝘴𝘦𝘳𝘕𝘢𝘮𝘦</label>&nbsp;
-        <input type="text"  name="n1" id="name" placeholder="𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆" style="border-radius: 3px; "><br><br>
+        <input type="text"  name="n1" id="name" placeholder="𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆" style="border-radius: 3px;"><br><br>
         <label for="">𝘗𝘢𝘴𝘴𝘞𝘰𝘳𝘥</label>&nbsp;
         <input type="password" name="n2" id="pwd" placeholder="𝒑𝒂𝒔𝒔𝒘𝒐𝒓𝒅" style="border-radius: 3px;"><br><br>
-        <button class="btn btn-success" onclick="btnfun()" style="color: rgb(18, 18, 78);">𝑳𝒐𝒈𝒊𝒏</button>
+        <button class="btn btn-success"  style="color: rgb(18, 18, 78);">𝐋𝐨𝐠𝐢𝐧 </button>
         <p style="color: red">{{session('errmsg')}}</p>
-        <button class="btn btn-success"  style="color: rgb(18, 18, 78);"><a href="studbutton" style="color: whitesmoke;" >𝑺𝒕𝒖𝒅𝒆𝒏𝒕 𝑳𝒐𝒈𝒊𝒏</a> </button>
 
     </form>
 </body>
@@ -48,17 +47,5 @@ function login(){
     }
     return true
 }
-// function btnfun(){
-//     username="admin";
-//         password="admin";
-//         inputusername=document.getElementById('name').value;
-//         inputpassword=document.getElementById('pwd').value;
 
-//         if ((username == inputusername) && (password == inputpassword))
-//         {
-//                     window.location ="adminhome"
-//         } else{
-//             document.getElementById('p1').innerHTML="incorect username or password"
-//               }
-// }
 </script>

@@ -63,7 +63,7 @@
                
             </tr>
         </table>
-        <p style="color: green">{{session('message')}}</p>
+        <p style="color: green">{{session('msg')}}</p>
     </form>
     <script>
         function registration() {

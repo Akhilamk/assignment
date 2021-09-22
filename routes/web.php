@@ -18,35 +18,32 @@ use App\Http\Controllers\admin;
 Route::get('/', function () {
     return view('welcome');
 });
-////login////
-// Route::view('login','loginform');
-// Route::post('login',[test::class,'logfun']);
-// Route::get('new',[test::class,'getfun']);
 
-Route::get('log',[admin::class,'getfun']);
-Route::post('log',[admin::class,'logfun']);
-Route::get('adminhome',[admin::class,'dispfun']);///diaplay adminhome///
+Route::view('login','loginform');
+Route::post('adlog',[test::class,'adfun']);///admin login//
+
+
+
+//studentbutton///
+Route::view('studbutton','studentlogin');
+
+////student login///
+Route::post('student',[test::class,'postfun']);
+Route::get('studreg',[test::class,'regfun']);//student ddata///
+
+
+Route::post('studdata',[test::class,'studlogin']);///stud login///
+Route::get('viewstud',[test::class,'studview']);
+
+
+/////tableview///
+Route::get('viewtable',[test::class,'tableview']);
+
 ///logout///
-Route::get('logot',[admin::class,'logoutfun']);
-
-////student///
-Route::view('student','student');
-Route::post('student',[admin::class,'regfun']);////insert///
-
-////studentlogin////
-// Route::post('studlogin',[admin::class,'postfun']);
-// // Route::get('studlogin',[admin::class,'getview']);
-// Route::get('view',[admin::class,'disp']);///display studenthome
-
-Route::post('studlogin',[admin::class,'postfun']);
-Route::get('view',[admin::class,'disp']);///display studenthome
+Route::get('logot',[test::class,'logoutfun']);
 
 /////activate////
-Route::get('active',[admin::class,'act']);
+Route::get('active',[test::class,'act']);
+
 ///inactivate///
-Route::get('inact',[admin::class,'inactivate']);
-
-
-
-
-
+Route::get('inact',[test::class,'inactivate']);
